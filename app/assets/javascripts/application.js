@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require_tree .
 
-import '../components/select2';
+

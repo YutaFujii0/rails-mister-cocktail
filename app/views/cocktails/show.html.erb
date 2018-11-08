@@ -14,7 +14,7 @@
     </div>
     <div class="container-right">
       <%= simple_form_for [@cocktail, @dose] do |f| %>
-        <%= f.association :ingredient, collection: Ingredient.order(:name),class: 'js-example-basic-single' %>
+        <%= f.association :ingredient, input_html: {class: 'js-example-basic-single'}, collection: Ingredient.order(:name) %>
 
         <%= f.input :description %>
         <%= f.submit 'Add',class: 'btn btn-success' %>
