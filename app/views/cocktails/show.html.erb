@@ -14,7 +14,7 @@
     </div>
     <div class="container-right">
       <%= simple_form_for [@cocktail, @dose] do |f| %>
-        <%= f.association :ingredient, collection: Ingredient.order(:name) %>
+        <%= f.association :ingredient, collection: Ingredient.order(:name),class: 'js-example-basic-single' %>
 
         <%= f.input :description %>
         <%= f.submit 'Add',class: 'btn btn-success' %>
@@ -22,3 +22,8 @@
     </div>
   </div>
 </div>
+<select class="js-example-basic-single" name="state">
+  <% Ingredient::INGREDIENTS.each do |ingredient| %>
+  <option value="<%= ingredient %>"><%= ingredient %></option>
+  <% end %>
+</select>
