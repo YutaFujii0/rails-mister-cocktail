@@ -1,11 +1,11 @@
 <div class="navbar-wagon">
-  <%= link_to "Barful-life", root_path, id: "logo" %>
-
-  <%= yield :title %>
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <%= link_to "Make a cocktail", new_cocktail_path, class: 'btn btn-success' %>
-
+  <div class="navbar-logo">
+    <%= link_to "Barful-life", root_path, id: "logo" %>
+  </div>
+  <div class="navbar-center">
+    <%= yield :title %>
+  </div>
+  <div class="navbar-wagon-right">
+    <%= link_to "Make a cocktail", new_cocktail_path, class: 'btn btn-danger' %>
   </div>
 </div>

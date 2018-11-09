@@ -4,4 +4,12 @@
   border: 0.5px solid $light;
   border-radius: 3px;
   color: $light;
+  padding: 5px 20px;
+  letter-spacing: 3px;
+  box-shadow: 1px 1px 2px $light;
+  text-shadow: 1px 1px 2px $light;
+  &:hover {
+    box-shadow: none;
+    text-shadow: none;
+  }
 }
