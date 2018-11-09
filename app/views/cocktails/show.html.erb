@@ -34,9 +34,11 @@
       <%= f.submit 'Add review',class: 'btn btn-success'%>
     <% end %>
     <div class="product">
-      <% @cocktail.reviews.each do |review| %>
+      <%= @cocktail.reviews.each do |review| %>
         <%= render partial: "layouts/review", object: review %>
       <% end %>
     </div>
   </div>
 </div>
+
+<%= cl_image_tag @cocktail.image_path, height: 300, width: 400, crop: :fill %>

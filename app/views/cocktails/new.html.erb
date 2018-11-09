@@ -5,7 +5,8 @@
       <%= simple_form_for @cocktail do |f| %>
         <div class="form-group">
           <%= f.input :name %>
-
+          <%= f.input :image_path %>
+          <%= f.input :image_path_cache, as: :hidden %>
         </div>
         <%= f.submit :Create, class: 'btn btn-success' %>
       <% end %>
