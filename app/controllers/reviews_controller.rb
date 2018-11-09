@@ -3,12 +3,13 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    cocktail = Cocktail.find(params[:cocktail_id])
-    @review.cocktail = cocktail
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @review.cocktail = @cocktail
     if @review.save
-      redirect_to cocktail_path(cocktail)
+      redirect_to cocktail_path(@cocktail)
     else
-      render cocktail_path(cocktail)
+      @dose = Dose.new
+      render 'cocktails/show'
     end
   end
 

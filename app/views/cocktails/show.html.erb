@@ -1,4 +1,12 @@
-<%= render partial: "layouts/banner", object: @cocktail %>
+<% content_for :header do %>
+  <h2><%= @cocktail.name %></h2>
+<% end %>
+<% content_for :url do %>
+  <%= @cocktail.image_path.file ? @cocktail.image_path : 'https://images.unsplash.com/photo-1514361659284-59851c90d011?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b19003e0c4450d5a06aefcd04e6a2173&auto=format&fit=crop&w=800&q=60' %>
+<% end %>
+
+<%= render 'layouts/banner' %>
+
 <div class="container">
     <div class="container-top">
         <div class="container-cocktail-body">
@@ -34,7 +42,7 @@
       <%= f.submit 'Add review',class: 'btn btn-success'%>
     <% end %>
     <div class="product">
-      <%= @cocktail.reviews.each do |review| %>
+      <% @cocktail.reviews.each do |review| %>
         <%= render partial: "layouts/review", object: review %>
       <% end %>
     </div>
