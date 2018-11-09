@@ -1,8 +1,11 @@
+<% content_for :header do %>
+  <h2>Find your favorite MAGIC</h2>
+<% end %>
 <% content_for :title do %>
   <h1>Cocktail List</h1>
 <% end %>
 <% content_for :url do %>
-  'https://images.unsplash.com/photo-1514361659284-59851c90d011?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b19003e0c4450d5a06aefcd04e6a2173&auto=format&fit=crop&w=800&q=60'
+  'https://images.unsplash.com/photo-1536510648730-1dd9ea3768ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=35f6ac88ddf7d1b936fbcd8dd15611a0&auto=format&fit=crop&w=800&q=60'
 <% end %>
 
 <%= render 'layouts/banner' %>
@@ -10,11 +13,11 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
+      <% path = cocktail.image_path.file ? cocktail.image_path : 'https://images.unsplash.com/photo-1461823385004-d7660947a7c0?ixlib=rb-0.3.5&s=4720ee3ca56274a49bb17c0e99bcab06&auto=format&fit=crop&w=800&q=60' %>
       <div class="col-xs-12 col-sm-4">
         <%= link_to cocktail_path(cocktail) do %>
           <div class="card">
-            <div class="card-cocktail-pic">
-
+            <div class="card-cocktail-pic" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= path %>);">
             </div>
             <div class="card-cocktail-footer">
               <h3><%= cocktail.name %></h3>
@@ -25,7 +28,3 @@
     <% end %>
   </div>
 </div>
-
-<%= link_to cocktails_path do %>
-    <i class="fab fa-facebook-f"></i>
-  <% end %>
