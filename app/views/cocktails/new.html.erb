@@ -1,13 +1,13 @@
-<div class="container">
-  <h2>Make a new cocktail</h2>
+<div class="container" style="margin-top: 70px">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2>Create new cocktail</h2>
       <%= simple_form_for @cocktail do |f| %>
         <div class="form-group">
-          <%= f.input :name %>
-          <%= f.input :color %>
-          <%= f.input :description %>
-          <%= f.input :image_path, class: 'btn btn-info' %>
+          <%= f.input :name, placeholder: "ex) Gin tonic" %>
+          <%= f.input :color, collection: Cocktail::COLOR %>
+          <%= f.input :description, as: :text, input_html: {rows: 5} %>
+          <%= f.input :image_path, label: "Upload image" %>
           <%= f.input :image_path_cache, as: :hidden %>
         </div>
         <%= f.submit :Create, class: 'btn btn-primary' %>

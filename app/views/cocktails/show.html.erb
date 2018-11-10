@@ -1,3 +1,4 @@
+<!-- arrange data for rendering pages -->
 <% content_for :header do %>
   <h2><%= @cocktail.name %></h2>
 <% end %>
@@ -5,9 +6,11 @@
   <%= @cocktail.image_path.file ? @cocktail.image_path : 'https://images.unsplash.com/photo-1514361659284-59851c90d011?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b19003e0c4450d5a06aefcd04e6a2173&auto=format&fit=crop&w=800&q=60' %>
 <% end %>
 
+<!-- layout -->
+
 <%= render 'layouts/banner' %>
 
-<div class="container">
+<div class="container" id="detail">
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
         <div class="container-top">
@@ -18,11 +21,7 @@
               <div class="container-center">
               </div>
               <div class="container-right">
-                  <%= simple_form_for [@cocktail, @dose] do |f| %>
-                  <%= f.association :ingredient, collection: Ingredient.order(:name) %>
-                  <%= f.input :description %>
-                  <%= f.submit 'Add',class: 'btn btn-primary' %>
-                  <% end %>
+                  <%= render 'cocktails/show_form_for_dose' %>
               </div>
           </div>
         </div>
@@ -31,18 +30,21 @@
   <div class="container-bottom">
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <%= simple_form_for [@cocktail, @review] do |f| %>
-          <%= f.input :name %>
-          <%= f.input :content %>
-          <%= f.input :rating, collection: (1..5).to_a %>
-          <%= f.submit 'Add review',class: 'btn btn-primary'%>
-        <% end %>
-      </div>
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <div class="product">
-          <% @cocktail.reviews.each do |review| %>
+        <h4>Reviews
+          <%= link_to cocktail_path(@cocktail, anchor: "write_review") do %>
+            <i class="fas fa-pencil-alt orange" style="padding-left: 20px"></i>
+          <% end %>
+        </h4>
+        <div class="container-bottom-reviews">
+          <p><%= "(No reviews)" if @cocktail.reviews.empty? %></p>
+          <% @cocktail.reviews.reverse.each do |review| %>
             <%= render partial: "layouts/review", object: review %>
           <% end %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="container-bottom-new" id="write_review">
+          <%= render 'cocktails/show_form_for_review' %>
         </div>
       </div>
     </div>

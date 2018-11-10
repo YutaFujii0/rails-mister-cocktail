@@ -1,6 +1,6 @@
 class Cocktail < ApplicationRecord
   # before_save :default_values
-  COLOR = ['red', 'orenge', 'yellow', 'green', 'blue', 'white', 'clear', 'others']
+  COLOR = ['clear', 'white', 'red', 'orenge', 'yellow', 'green', 'blue', 'others']
   SAMPLE_IMAGE = ["dozbokbluhvwk22xcswg", "id4qqducogg9oxtupqtp", "yy1izbi5y6ib4hsoqhpa"]
 
   has_many :doses, dependent: :destroy

@@ -1,0 +1,6 @@
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :rating, collection: (1..5).to_a %>
+  <%= f.input :content, as: :text, input_html: {rows: 5} %>
+  <%= f.submit 'Add review',class: 'btn btn-primary'%>
+<% end %>

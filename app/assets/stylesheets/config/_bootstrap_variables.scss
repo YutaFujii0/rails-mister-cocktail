@@ -27,3 +27,8 @@ $text-color: $light;
 $input-border-focus: $light;
 $btn-primary-color: $dark-orange;
 
+.btn-primary:hover {
+  background-color: $orange !important;
+  color: $light !important;
+  border: 1px solid $light !important;
+}
