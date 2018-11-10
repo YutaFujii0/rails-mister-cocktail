@@ -1,0 +1,44 @@
+.review {
+  display: flex;
+  align-items: center;
+  margin: -1px 0;
+  padding: 20px;
+  border-top: 1px solid $dark-gray;
+  border-bottom: 1px solid $dark-gray;
+  transition: all 0.15s ease;
+}
+
+.review:first-child {
+  border-top: 1px solid $light;
+}
+
+.review:last-child {
+  border-bottom: 1px solid $light;
+}
+
+/* Body design */
+.review-body {
+  flex: 1 1 auto;
+}
+.review-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.review-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* review image */
+.review-image {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 175px;
+}
+
+.review-star {
+  font-size: 12px;
+  padding: 0 20px 0 0;
+}

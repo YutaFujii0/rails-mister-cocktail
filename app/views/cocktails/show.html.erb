@@ -36,10 +36,8 @@
           <% end %>
         </h4>
         <div class="container-bottom-reviews">
-          <p><%= "(No reviews)" if @cocktail.reviews.empty? %></p>
-          <% @cocktail.reviews.reverse.each do |review| %>
-            <%= render partial: "layouts/review", object: review %>
-          <% end %>
+          <p style="margin: 0 20px"><%= "(No reviews)" if @cocktail.reviews.empty? %></p>
+          <%= render "layouts/review" %>
         </div>
       </div>
       <div class="col-xs-12 col-md-8 col-md-offset-2">
