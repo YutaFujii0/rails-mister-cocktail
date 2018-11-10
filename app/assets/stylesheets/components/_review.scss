@@ -25,11 +25,19 @@
   font-size: 23px;
   margin-top: 0;
 }
-.review-body p {
+.review-post-content {
   font-weight: lighter;
-  color: #999999;
+  color: $very-light-gray;
   margin-bottom: 0;
 }
+
+.review-post-time {
+  font-weight: bolder;
+  font-size: 12px;
+  color: $light-gray;
+  margin-bottom: 0;
+}
+
 
 /* review image */
 .review-image {
@@ -42,3 +50,4 @@
   font-size: 12px;
   padding: 0 20px 0 0;
 }
+

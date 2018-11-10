@@ -10,3 +10,4 @@
 // console.log('Hello World from Webpacker')
 import 'bootstrap';
 import '../components/select2';
+import '../cocktails/review';
