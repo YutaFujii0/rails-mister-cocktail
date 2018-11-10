@@ -5,6 +5,8 @@
       <%= simple_form_for @cocktail do |f| %>
         <div class="form-group">
           <%= f.input :name %>
+          <%= f.input :color %>
+          <%= f.input :description %>
           <%= f.input :image_path, class: 'btn btn-info' %>
           <%= f.input :image_path_cache, as: :hidden %>
         </div>

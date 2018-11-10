@@ -1,6 +1,6 @@
 class Cocktail < ApplicationRecord
   # before_save :default_values
-
+  COLOR = ['red', 'orenge', 'yellow', 'green', 'blue', 'white', 'clear', 'others']
   SAMPLE_IMAGE = ["dozbokbluhvwk22xcswg", "id4qqducogg9oxtupqtp", "yy1izbi5y6ib4hsoqhpa"]
 
   has_many :doses, dependent: :destroy
@@ -11,7 +11,7 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
-
+  validates :color, inclusion: { in: [COLOR, nil].flatten }
   # def default_values
   #   self.image_path = SAMPLE_IMAGE.sample if self.image_path.file = nil?
   # end

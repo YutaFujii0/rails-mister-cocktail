@@ -32,6 +32,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
         <%= simple_form_for [@cocktail, @review] do |f| %>
+          <%= f.input :name %>
           <%= f.input :content %>
           <%= f.input :rating, collection: (1..5).to_a %>
           <%= f.submit 'Add review',class: 'btn btn-primary'%>
