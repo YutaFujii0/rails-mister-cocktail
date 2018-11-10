@@ -1,0 +1,14 @@
+.underline {
+  border-bottom: 1px solid $light;
+}
+
+.table-cocktail-name{
+  margin: 0;
+}
+
+td {
+  padding: 5px 10px;
+  .empty {
+    width: 5px;
+  }
+}
