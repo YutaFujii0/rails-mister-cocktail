@@ -1,14 +1,15 @@
 @import "show_table";
 
 .container-cocktail-body {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   align-items: top;
   padding: 100px 0px;
 }
 
 .container-left {
   vertical-align: text-top;
+  text-align: center;
 }
 
 .container-bottom {

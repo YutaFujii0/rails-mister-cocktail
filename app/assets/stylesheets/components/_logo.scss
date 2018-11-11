@@ -13,3 +13,31 @@
     text-shadow: none;
   }
 }
+
+.navbar-center {
+}
+
+h4.navbar-center-title  {
+  font-family: $logo-font;
+  font-size: 18px;
+  color: $light;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px $light;
+}
+
+.navbar-logo-icon {
+  text-align: center;
+  p {
+    font-size: 9px;
+    margin: 0;
+  }
+}
+
+
+.navbar-new-icon {
+  text-align: center;
+  p {
+    font-size: 9px;
+    margin: 0;
+  }
+}
