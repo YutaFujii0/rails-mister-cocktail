@@ -41,6 +41,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'font-awesome-sass', '~> 5.0.9'
+gem 'rest-client', '<2.0'
 gem 'simple_form'
 
 # Reduces boot times through caching; required in config/boot.rb
