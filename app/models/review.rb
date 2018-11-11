@@ -3,6 +3,7 @@ class Review < ApplicationRecord
 
   # validates :name, length: {max: 15}
   validates :content, presence: true
+  validates :content, length: { maximum: 200 }
   validates :rating, presence: true
 
   def days_ago
