@@ -32,32 +32,37 @@ td {
 
 
 // colors
-.cocktail-white {
-  background-color: white;
+.cocktail-clear {
   border: 1px solid $light;
+  box-shadow: 0 0 10px $light;
+}
+
+.cocktail-white {
+  background-color: $light-gray;
+  box-shadow: 0 0 10px $light-gray;
 }
 
 .cocktail-red {
-  background-color: $orange;
-  border: 1px solid $light;
+  background-color: $red;
+  box-shadow: 0 0 10px $red;
 }
 
 .cocktail-orange {
-  background-color: orange;
-  border: 1px solid $light;
+  background-color: $orange;
+  box-shadow: 0 0 10px $orange;
 }
 
 .cocktail-yellow {
-  background-color: yellow;
-  border: 1px solid $light;
+  background-color: $yellow;
+  box-shadow: 0 0 10px $yellow;
 }
 
 .cocktail-green {
-  background-color: green;
-  border: 1px solid $light;
+  background-color: $green;
+  box-shadow: 0 0 10px $green;
 }
 
 .cocktail-blue {
-  background-color: blue;
-  border: 1px solid $light;
+  background-color: $blue;
+  box-shadow: 0 0 10px $blue;
 }
