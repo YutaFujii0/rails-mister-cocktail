@@ -25,7 +25,6 @@ class CocktailsController < ApplicationController
   end
 
   def search
-
     @cocktails = Cocktail.where(
       Cocktail.arel_table[:name]
       .lower

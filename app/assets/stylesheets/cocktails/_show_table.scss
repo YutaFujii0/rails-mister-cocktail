@@ -1,3 +1,4 @@
+// table general things
 table {
   margin-bottom: 50px;
 }
@@ -6,13 +7,57 @@ table {
   border-bottom: 1px solid $light;
 }
 
-.table-cocktail-name{
-  margin: 0;
-}
 
 td {
   padding: 5px 10px;
   .empty {
     width: 5px;
   }
+}
+
+// header above the table
+.table-header {
+  display: flex;
+}
+
+.table-cocktail-name h3{
+  margin: 0;
+}
+
+.table-cocktail-color {
+  width: 10px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+
+// colors
+.cocktail-white {
+  background-color: white;
+  border: 1px solid $light;
+}
+
+.cocktail-red {
+  background-color: $orange;
+  border: 1px solid $light;
+}
+
+.cocktail-orange {
+  background-color: orange;
+  border: 1px solid $light;
+}
+
+.cocktail-yellow {
+  background-color: yellow;
+  border: 1px solid $light;
+}
+
+.cocktail-green {
+  background-color: green;
+  border: 1px solid $light;
+}
+
+.cocktail-blue {
+  background-color: blue;
+  border: 1px solid $light;
 }

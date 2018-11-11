@@ -1,15 +1,17 @@
-// Define variables for your color scheme
-
-// For example:
-$red: #EE5F5B;
-$blue: #469AE0;
-$yellow: #FDB631;
-$orange: #dc213f;
-$green: #32B796;
-$gray: #000000;
-$very-light-gray: #F4F4F4;
-$light-gray: #777777;
-$dark-gray: #5a5a5a;
+// key colors
 $light: rgb(253, 252, 243);
 $dark-orange: #1b130a;
 $middle-orange: #291d0f;
+
+// colors for cocktail
+$red: #EE5F5B; // key color for button
+$orange: #dc213f;
+$yellow: #FDB631;
+$green: #32B796;
+$blue: #469AE0;
+
+// gray scale
+$dark-gray: #5a5a5a;
+$gray: #000000;
+$light-gray: #777777;
+$very-light-gray: #F4F4F4;
