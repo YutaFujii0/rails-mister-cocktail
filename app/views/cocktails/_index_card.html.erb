@@ -4,7 +4,7 @@
       <%= link_to cocktail_path(cocktail) do %>
         <div class="card">
             <div class="card-cocktail-pic"">
-                <%= cl_image_tag(path, width: 250, height: 250, crop: "fill", class: "img-circle" ) %>
+                <%= cl_image_tag(path, art: "sizzle", width: 250, height: 250, crop: "fill", class: "img-circle" ) %>
             </div>
             <div class="card-cocktail-footer">
                 <h3><%= cocktail.name %></h3>
