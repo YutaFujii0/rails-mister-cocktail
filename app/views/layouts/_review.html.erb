@@ -1,3 +1,4 @@
+<p style="margin: 0 20px"><%= "(No reviews)" if @cocktail.reviews.empty? %></p>
 <div class="reviews">
   <% @cocktail.reviews.reverse.each do |review| %>
     <div class="review">
@@ -13,7 +14,7 @@
       </div>
       <div class='review-body'>
         <p class='review-post-content'><%= review.content %></p>
-        <p class='review-post-time'><%= review.created_at %></p>
+        <p class='review-post-time'><%= review.days_ago %></p>
       </div>
     </div>
   <% end %>
