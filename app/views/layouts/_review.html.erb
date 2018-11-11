@@ -16,6 +16,15 @@
         <p class='review-post-content'><%= review.content %></p>
         <p class='review-post-time'><%= review.days_ago %></p>
       </div>
+      <div class="review-name">
+        <%= image_tag(review.avatar_url, {class: "img-circle avatar-sm"}) if review.avatar_url %>
+        <h4><%= review.github_name || review.name %></h4>
+      </div>
+      <div class="review-delete">
+        <%= link_to review_path(review), method: 'delete',data: { confirm: "Are you sure?"} do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

@@ -5,6 +5,12 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @cocktail = Cocktail.find(params[:cocktail_id])
     @review.cocktail = @cocktail
+    github_account_info = SearchGithubAccount.call(@review.name)
+    if github_account_info
+      @review.avatar_url = github_account_info[:avatar_url]
+      @review.github_name = github_account_info[:github_name]
+    end
+    # @review.set_github_info
     if @review.save
       redirect_to cocktail_path(@cocktail, anchor: "detail")
     else
@@ -29,6 +35,7 @@ class ReviewsController < ApplicationController
     redirect_to cocktail_path(@review.cocktail, anchor: "detail")
   end
 
+
   private
 
   def set_review
@@ -36,6 +43,14 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :name)
   end
+
+  # def set_github_info
+  #   github_account_info = SearchGithubAccount.call(@review.name)
+  #   return false if github_account_info
+
+  #   @review.avatar_url = github_account_info[:avatar_url]
+  #   @review.github_name = github_account_info[:github_name]
+  # end
 end
