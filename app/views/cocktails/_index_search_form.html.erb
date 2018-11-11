@@ -1,0 +1,4 @@
+<%= simple_form_for(Cocktail.new, method: :post, url: cocktails_path, defaults: {input_html: {class: 'cocktail-search'}}) do |f| %>
+    <%= f.input :name, input_html: {class: 'cocktail-search'}, placeholder: "Search for...", label: false %>
+    <%= f.submit "search", class: 'cocktail-search' %>
+  <% end %>

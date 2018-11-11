@@ -29,3 +29,11 @@
   //   display: none;
   // }
 }
+.search-cocktail {
+  label {
+    display: none;
+  }
+}
+  input[type="submit"].search-cocktail {
+      display: none;
+  }

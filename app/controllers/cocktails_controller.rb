@@ -24,6 +24,16 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def search
+
+    @cocktails = Cocktail.where(
+      Cocktail.arel_table[:name]
+      .lower
+      .matches("%#{params[:cocktail][:name].downcase}%")
+    )
+    render 'index'
+  end
+
   private
 
   def set_cocktail
