@@ -1,10 +1,12 @@
-<%= simple_form_for(
-  Cocktail.new,
-  method: :post,
-  url: cocktails_path,
-  defaults: {input_html: {class: 'cocktail-search'}}
-  ) do |f| %>
+<div class="col-xs-12 col-md-8 col-md-offset-2">
+  <%= simple_form_for(
+    Cocktail.new,
+    method: :post,
+    url: cocktails_path,
+    defaults: {input_html: {class: 'cocktail-search'}}
+    ) do |f| %>
 
-    <%= f.input :name, input_html: {class: 'cocktail-search'}, placeholder: "Search for...", label: false %>
-    <%= f.submit "search", style: 'display: none' %>
+      <%= f.input :name, input_html: {class: 'cocktail-search'}, placeholder: "Search for...", label: false %>
+      <%= f.submit "search", style: 'display: none' %>
   <% end %>
+</div>
