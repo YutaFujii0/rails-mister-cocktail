@@ -2,7 +2,7 @@
   <%= simple_form_for(
     Cocktail.new,
     method: :post,
-    url: search_cocktails_path,
+    url: '/cocktails/search',
     defaults: {input_html: {class: 'cocktail-search'}}
     ) do |f| %>
 
